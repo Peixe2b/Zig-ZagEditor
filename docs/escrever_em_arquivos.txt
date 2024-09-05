@@ -1,0 +1,12 @@
+1. Abrir editor no cmd
+
+$ python3 editor.py <filename>
+
+Nota: ao abrir o arquivo o programa vai ler ele e limpar a tela para começar o loop principal
+
+
+------------------------------
+
+
+2. Quando abrir o arquivo basta escrever ":[w]" e começar a editar, para sair do modo edição é só
+escrever :[v]
