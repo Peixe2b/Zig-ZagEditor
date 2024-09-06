@@ -1,6 +1,6 @@
 import colorama
 
-from scripts.modes import Mode
+from enums.modes import Mode
 
 
 class TextEditor:
@@ -8,13 +8,17 @@ class TextEditor:
     A class for managing text editor operations.
     """
     def __init__(self) -> None:
+        # Private vars
         self.__modes = (Mode.VISUAL, Mode.COMMAND, Mode.EDIT)
+
+        # Public vars
         self.mode = self.__modes[0]
         self.running = False
         self.current_filename = ""
+        self.config = None # config = Config()
         
     def run(self):
-        pass
+        print("Running Editor")
 
     def open_file(self, filename: str) -> str:
         return ""

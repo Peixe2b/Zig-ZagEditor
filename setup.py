@@ -1,7 +1,6 @@
 from setuptools import setup
+from zigzag import VERSION
 
-
-VERSION = '0.0.1'
 
 setup(
     name='Zig/ZagEditor',
