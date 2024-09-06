@@ -1,7 +1,7 @@
 import colorama
 
 from enums.modes import Mode
-
+from scripts.config import get_system_info
 
 class TextEditor:
     """
@@ -13,9 +13,9 @@ class TextEditor:
 
         # Public vars
         self.mode = self.__modes[0]
-        self.running = False
+        self.running = True
         self.current_filename = ""
-        self.config = None # config = Config()
+        self.system_info = get_system_info()
         
     def run(self):
         print("Running Editor")
