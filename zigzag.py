@@ -32,7 +32,7 @@ def start_program():
     print('Welcome to ZigZag Text Editor!')
     print("Preparing the application for use. Please wait...")
     editor = TextEditor()
-    editor.run()
+    editor.run_beta()
     sleep(1)
 
 
