@@ -1,8 +1,8 @@
 """--------------- Zig/Zag ---------------
 usage:
-    zigzag.py --start
-    zigzag.py --create <filename>
-    zigzag.py --open <filename>
+    zigzag.py start
+    zigzag.py create <filename>
+    zigzag.py open <filename>
     zigzag.py (--help | -h)
     zigzag.py --version
 use examples:
@@ -26,24 +26,24 @@ from docopt import docopt
 from scripts.editor import TextEditor
 
 
-VERSION = '0.0.1'
+VERSION: str = '0.0.1'
 
-def start_program():
+def start_program() -> None:
     print('Welcome to ZigZag Text Editor!')
     print("Preparing the application for use. Please wait...")
     editor = TextEditor()
-    editor.run_beta()
+    editor.run()
     sleep(1)
 
 
-def create_file(filename):
+def create_file(filename) -> None:
     with open(filename, "w") as file:
         file.write("")
         print("File created successfully!")
         file.close()
 
 
-def open_file(filename):
+def open_file(filename) -> None:
     if filename:
         with open(filename, 'r') as file:
             print(file.read())
@@ -52,7 +52,7 @@ def open_file(filename):
         print("Please provide a filename.")
 
 
-def init(version):
+def init(version) -> None:
     """
     Initialize the ZigZag application with the given version.
 
@@ -67,12 +67,12 @@ def init(version):
     """
     args = docopt(__doc__, version=version)
 
-    if args['--create']:
+    if args['create']:
         print(f'Creating new file at {args["<filename>"]}')
         create_file(args["<filename>"])
-    elif args["--start"]:
+    elif args["start"]:
         start_program()
-    elif args["--open"]:
+    elif args["open"]:
         print(f'Opening file... {args["<filename>"]}')
         open_file(args["<filename>"])
 

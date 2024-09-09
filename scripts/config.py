@@ -39,10 +39,3 @@ def show_system_info():
     print(f"Python Version: {python_vers}")
     print(f"Username: {username.nodename}")
     print("-------------------")
-
-
-def install():
-    """
-    Installs the app and its dependencies
-    """
-    pass
