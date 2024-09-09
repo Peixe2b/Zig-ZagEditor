@@ -20,20 +20,16 @@ use examples:
         >> File my_file.txt opened successfully!
 """
 
-from time import sleep
-
 from docopt import docopt
 from scripts.editor import TextEditor
+from scripts.config import VERSION
 
-
-VERSION: str = '0.0.1'
 
 def start_program() -> None:
     print('Welcome to ZigZag Text Editor!')
     print("Preparing the application for use. Please wait...")
     editor = TextEditor()
     editor.run()
-    sleep(1)
 
 
 def create_file(filename) -> None:

@@ -1,15 +1,17 @@
+from logging import Logger
 
 
-class Logger:
+class Log:
     def __init__(self) -> None:
         pass
 
     def log_error(self, msg):
-        pass
+        print("Problems in ZigZag ;-;")
+        Logger.error(self, msg)
 
     def log_info(self, msg):
-        pass
+        Logger.info(self, msg)
 
     def log_debug(self, msg):
-        pass
-    
+        Logger.debug(self, msg)
+   
