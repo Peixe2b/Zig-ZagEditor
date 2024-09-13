@@ -15,18 +15,3 @@ class TextInsertEvent(IEvent):
     
     def handle_event(self) -> None:
         return super().handle_event()
-
-class TextDeleteEvent(IEvent):
-    pass
-
-
-class CommandEvent(IEvent):
-    pass
-
-
-class CursorMoveEvent(IEvent):
-    pass
-
-
-class FileSaveEvent(IEvent):
-    pass
